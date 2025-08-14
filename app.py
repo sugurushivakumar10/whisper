@@ -68,7 +68,7 @@ if clear_clicked and ctx and ctx.audio_processor:
     st.success("Cleared recorded audio buffer.")
 
 # ---- Helper: save recorded PCM to a WAV file ----
-def save_wav(frames: list[bytes], sr: int, path: str | Path) -> Path:
+def save_wav(frames: list[bytes], sr: int, path: Union[str, Path]) -> Path:
     path = Path(path)
     with wave.open(str(path), "wb") as wf:
         wf.setnchannels(1)      # mono
