@@ -1,4 +1,5 @@
 streamlit
 whishper
 tempfile
-pip
+pip==25.2
+
